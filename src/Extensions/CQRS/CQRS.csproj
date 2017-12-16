@@ -2,18 +2,29 @@
 
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
-    <AssemblyName>ByndyuSoft.Extensions.CQRS.Abstractions</AssemblyName>
+    <AssemblyName>Byndyusoft.Extensions.CQRS</AssemblyName>
     <RootNamespace>Byndyusoft.Extensions.CQRS</RootNamespace>
     <Version>0.1.0</Version>
     <RepositoryUrl>https://github.com/Byndyusoft/Byndyusoft.Dotnet.Core.Infrastructure</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/Byndyusoft/Byndyusoft.Dotnet.Core.Infrastructure</PackageProjectUrl>
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/1859219?s=200&amp;v=4</PackageIconUrl>
-    <Company>Byndyusoft</Company>
+    <Company>ByndyuSoft</Company>
     <Authors>govorovvs</Authors>
     <PackageTags>byndyusoft;extensions;cqrs;infrastructure</PackageTags>
-    <PackageId>Byndyusoft.Extensions.CQRS.Abstractions</PackageId>
-    <Product>Byndyusoft.Extensions.CQRS.Abstractions</Product>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS.Abstractions\CQRS.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.1" />
+    <Reference Include="System.ComponentModel" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
+  </ItemGroup>
 
 </Project>
