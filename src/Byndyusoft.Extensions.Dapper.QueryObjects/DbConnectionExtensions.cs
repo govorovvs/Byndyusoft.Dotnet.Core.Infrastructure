@@ -57,6 +57,11 @@
             return connection.QuerySingleOrDefault(queryObject.Sql, queryObject.QueryParams, transaction, commandTimeout, commandType);
         }
 
+        public static void Execute(this IDbConnection connection, QueryObject queryObject, IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
+        {
+            connection.Execute(queryObject.Sql, queryObject.QueryParams, transaction, commandTimeout, commandType);
+        }
+
         public static SqlMapper.GridReader QueryMultiple(this IDbConnection connection, QueryObject queryObject,
             IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null)
         {

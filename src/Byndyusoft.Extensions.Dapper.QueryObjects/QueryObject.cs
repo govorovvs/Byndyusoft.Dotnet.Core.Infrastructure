@@ -41,5 +41,7 @@
         ///     Parameter list
         /// </summary>
         public object QueryParams { get; private set; }
+
+
     }
 }

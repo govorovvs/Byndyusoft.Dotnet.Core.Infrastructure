@@ -75,6 +75,14 @@
             return connection.QueryMultipleAsync(command);
         }
 
+        public static Task ExecuteAsync(this IDbConnection connection, QueryObject queryObject,
+            IDbTransaction transaction = null, int? commandTimeout = null, CommandType? commandType = null,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var command = CreateCommand(queryObject, transaction, commandTimeout, commandType, cancellationToken);
+            return connection.ExecuteAsync(command);
+        }
+
         private static CommandDefinition CreateCommand(QueryObject queryObject, IDbTransaction transaction,
             int? commandTimeout, CommandType? commandType, CancellationToken cancellationToken)
         {
