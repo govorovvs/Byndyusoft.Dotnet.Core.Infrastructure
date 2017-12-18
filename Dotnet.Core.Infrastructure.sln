@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E547DC46-5195-40B7-BB5B-CE9F5EE770BA}"
 EndProject
@@ -32,13 +32,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		dockerfile = dockerfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "tests\Tests\Tests.csproj", "{6AACD164-51E5-4411-86AB-623CEF468C76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "tests\Tests\Tests.csproj", "{6AACD164-51E5-4411-86AB-623CEF468C76}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrations", "src\Migrations\Migrations.csproj", "{D2FCE7F0-B964-446C-9748-C81DD20F806D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{1222E1EF-03F9-40FC-B247-DC05FEDAF5D2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "src\Jobs\Consumer\Consumer.csproj", "{FBA53287-CDE7-4620-919B-44BB0BD72F0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", "{6F0EB7D5-060C-4238-8338-B42AD52D78B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dapper", "Dapper", "{24D252D7-296C-4CE0-ADCF-F16D5BB42F90}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Byndyusoft.Extensions.Dapper.QueryObjects", "src\Byndyusoft.Extensions.Dapper.QueryObjects\Byndyusoft.Extensions.Dapper.QueryObjects.csproj", "{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +100,10 @@ Global
 		{FBA53287-CDE7-4620-919B-44BB0BD72F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA53287-CDE7-4620-919B-44BB0BD72F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA53287-CDE7-4620-919B-44BB0BD72F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +123,11 @@ Global
 		{D2FCE7F0-B964-446C-9748-C81DD20F806D} = {E547DC46-5195-40B7-BB5B-CE9F5EE770BA}
 		{1222E1EF-03F9-40FC-B247-DC05FEDAF5D2} = {E547DC46-5195-40B7-BB5B-CE9F5EE770BA}
 		{FBA53287-CDE7-4620-919B-44BB0BD72F0E} = {1222E1EF-03F9-40FC-B247-DC05FEDAF5D2}
+		{6F0EB7D5-060C-4238-8338-B42AD52D78B9} = {E547DC46-5195-40B7-BB5B-CE9F5EE770BA}
+		{24D252D7-296C-4CE0-ADCF-F16D5BB42F90} = {6F0EB7D5-060C-4238-8338-B42AD52D78B9}
+		{C3699071-0E77-4F4F-AB0D-D3E7D120C6B8} = {24D252D7-296C-4CE0-ADCF-F16D5BB42F90}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EF50E93-8683-4137-8BD1-2A6DAFB98357}
 	EndGlobalSection
 EndGlobal
